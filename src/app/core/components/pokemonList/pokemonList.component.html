@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="pokemonList.component.ts" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+    <title>My Pokedex</title>
+</head>
+<body >
+    <h1 class="titleText">Welcome to the pokedex ! </h1>
+    <div class="search-bar">
+        <div>search by name : </div>
+        <input type="search" id="search" name="q" (keyup)="searchPokemon()" />
+    </div>
+
+    <div class="pokemon-grid">
+        <div  *ngFor="let pokemon of filteredPokemons" id={{pokemon.name}} class="box" (click)="NavigateToPokemonDetail(pokemon.name, pokemon.type)">
+            <div id="hover-box">
+                <div class="elem-inside-grid" id="fond">
+                        <p id="name"><b id="name"> {{ pokemon.name }} </b> </p>
+                        <div id="image-contenor">
+                            <img id="image" [src]="pokemon.pic" alt="picture of the pokemon ">
+                        </div>
+                        <b id="click">wanna see {{pokemon.name}} ?</b>
+                        <p id="id"><b>id : </b>{{pokemon.id}}</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+    
+</div>
+</body>
+</html>

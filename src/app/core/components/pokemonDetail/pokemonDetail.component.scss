@@ -1,0 +1,67 @@
+//color palette
+$cardBorder : #f6e652;
+$red : #D32F2F;
+$cardInside : #f8c718;
+
+#fond{
+    padding: 4vh;
+    background-color: #f8c718;
+}
+
+.titleText{
+    color: whitesmoke;
+    font-family:bold;
+    font-size: 8vw;
+    line-height : 0.7 ;
+    font-family: "Jersey 10", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+b{ 
+    font-size: 20px;
+}
+p{
+    font-size: 15px;
+}
+#image-contenor{
+    padding: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#div-contenor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 10vw;
+}
+#image{
+    height: 35vh;
+}
+#PokedexButton{
+    margin-bottom: 5vh;
+    height:5vh;
+    min-height: 30px;
+    min-width: 12vw;
+    line-height: 5vh;
+    width:150px;
+    color:white;
+    background-color:#D32F2F;
+    padding:1vw;
+    position: relative;
+    text-align: center;
+}
+#PokedexButton:hover{
+    background-color : grey;
+}
+
+#border{
+    background-color: $cardBorder;
+    padding: 2vh;
+    color: whitesmoke;
+    border-radius: 15px;
+}

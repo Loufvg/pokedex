@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="pokemonDetail.component.js " defer>  </script>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>{{pokemonName}}</title>
+</head>
+<body >
+    <div id="PokedexButton" (click)="NavigateToPokemonList()">Go back to your Pokedex</div>
+        <div id="border">
+            <div id="fond">
+                <div  *ngFor="let pokemon of chosenPokemon" id={{pokemon.type}} class="box">
+                    <div id="div-contenor">
+                        <div id="image-contenor">
+                            <img id="image" [src]="pokemon.pic" alt="picture of the pokemon ">
+                        </div>
+                        <div id="text-contenor">
+                            <p class="titleText" id="name">{{pokemon.name}}</p>
+                            <p id="pv"><b> health :</b> {{pokemon.health}}</p>
+                            <p id="type"><b> type :</b> {{pokemon.type}}</p>
+                            <p id="height"><b> height :</b> {{pokemon.height}}</p>
+                            <p id="attack"><b> attack power : </b>{{pokemon.attackPower}}</p> 
+                            <p id="id"><b>id : </b>{{pokemon.id}}</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+
